@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collectable : MonoBehaviour
 {
     private float speed;
+    public int scoreValue = 10;
 
     // Initialize the collectable with a speed
     public void Initialize(float collectableSpeed)
@@ -28,6 +30,7 @@ public class Collectable : MonoBehaviour
         if (other.CompareTag("Player"))  // Assuming the player has a "Player" tag
         {
             Debug.Log("Collectable collected!");
+            Object.FindAnyObjectByType<ScoreManager>()?.AddScore(scoreValue);
             Destroy(gameObject);  // Optional: Destroy the collectable after being collected
         }
     }
