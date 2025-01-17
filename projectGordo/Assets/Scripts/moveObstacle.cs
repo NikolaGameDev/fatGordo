@@ -21,12 +21,12 @@ public class moveObstacle : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the obstacle collides with the player
-        if (collision.gameObject.CompareTag("Player"))  // Assuming the player has a "Player" tag
+        if (other.CompareTag("Player"))  // Assuming the player has a "Player" tag
         {
-            Debug.Log("Obstacle hit the player!");  // Log when the obstacle hits the player
+            Debug.Log("Obstacle hit the player!");
             Destroy(gameObject);  // Optional: Destroy the obstacle after hitting the player
         }
     }
