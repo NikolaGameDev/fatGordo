@@ -5,8 +5,6 @@ public class ObstacleManager : MonoBehaviour
     public GameObject obstaclePrefab;  // Obstacle prefab
     public float minSpawnRate = 1f;  // Minimum time between spawns
     public float maxSpawnRate = 5f;  // Maximum time between spawns
-    public float obstacleSpeed = 3f;  // Speed at which obstacles move towards the player
-
     private float spawnRate;  // Current spawn rate
     private float spawnTimer;  // Timer to track spawn intervals
 
@@ -37,6 +35,5 @@ public class ObstacleManager : MonoBehaviour
         // Spawn all obstacles from the same position as the ObstacleManager
         Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y);
         GameObject obstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
-        obstacle.GetComponent<moveObstacle>().Initialize(obstacleSpeed);  // Initialize obstacle with speed
     }
 }

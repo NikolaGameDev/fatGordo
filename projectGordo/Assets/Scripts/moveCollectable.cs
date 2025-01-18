@@ -3,15 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Collectable : MonoBehaviour
 {
-    private float speed;
+    public float speed;
     public int scoreValue = 10;
-
-    // Initialize the collectable with a speed
-    public void Initialize(float collectableSpeed)
-    {
-        speed = collectableSpeed;
-    }
-
     private void Update()
     {
         // Move the collectable towards the player (move left in 2D)

@@ -5,7 +5,6 @@ public class collectableSpawner : MonoBehaviour
     public GameObject collectablePrefab;  // Collectable prefab
     public float minSpawnRate = 1f;  // Minimum time between spawns
     public float maxSpawnRate = 5f;  // Maximum time between spawns
-    public float collectableSpeed = 3f;  // Speed at which collectables move towards the player
 
     private float spawnRate;  // Current spawn rate
     private float spawnTimer;  // Timer to track spawn intervals
@@ -37,6 +36,5 @@ public class collectableSpawner : MonoBehaviour
         // Spawn all collectables from the same position as the CollectableManager
         Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y);
         GameObject collectable = Instantiate(collectablePrefab, spawnPosition, Quaternion.identity);
-        collectable.GetComponent<Collectable>().Initialize(collectableSpeed);  // Initialize collectable with speed
     }
 }
