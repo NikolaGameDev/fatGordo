@@ -3,25 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class Collectable : MonoBehaviour
 {
-    public float speed;
+   // public float speed;
     public int scoreValue = 10;
-    private void Update()
+    private gameManager gameManager;
+    private void Start()
     {
-        // Move the collectable towards the player (move left in 2D)
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-        // Destroy the collectable when it goes off-screen
-        if (transform.position.x < -10f)  // Adjust based on your camera view
-        {
-            Destroy(gameObject);
-        }
+        gameManager = Object.FindAnyObjectByType<gameManager>();  
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the collectable collides with the player
         if (other.CompareTag("Player"))  // Assuming the player has a "Player" tag
         {
+            gameManager.playCollectSound();
             Debug.Log("Collectable collected!");
             Object.FindAnyObjectByType<ScoreManager>()?.AddScore(scoreValue);
             Destroy(gameObject);  // Optional: Destroy the collectable after being collected

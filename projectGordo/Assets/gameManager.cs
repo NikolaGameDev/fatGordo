@@ -7,8 +7,8 @@ public class gameManager : MonoBehaviour
     public GameObject gameOverUI; // Reference to the Game Over UI
     public Button restartButton; // Reference to the restart button
     public Button quitButton; // Reference to the quit button
-
-
+    public AudioSource audioSource;
+    public AudioClip collectableSound;
     private void Start()
     {
         restartButton.onClick.AddListener(RestartLevel);
@@ -29,5 +29,9 @@ public class gameManager : MonoBehaviour
     {
         Time.timeScale = 1f; // Unpause the game before quitting
         Application.Quit(); // Quit the application
+    }
+    public void playCollectSound()
+    {
+        audioSource.PlayOneShot(collectableSound);
     }
 }

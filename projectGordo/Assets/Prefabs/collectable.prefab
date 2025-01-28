@@ -139,3 +139,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   scoreValue: 10
+  collectSound: {fileID: 8300000, guid: 3b594ed465aa00b458b14c67157a784b, type: 3}
+  audioSource: {fileID: 0}

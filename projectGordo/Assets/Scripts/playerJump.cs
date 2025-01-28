@@ -21,7 +21,7 @@ public class playerJump : MonoBehaviour
 
     void CheckGroundStatus()
     {
-        if (Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer))
+        if (Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer))
         {
            // Debug.Log("Player is on the ground");
             coyoteTimeCounter = coyoteTime;  // Reset coyote time when grounded
