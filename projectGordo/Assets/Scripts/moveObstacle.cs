@@ -4,19 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class moveObstacle : MonoBehaviour
 {
-    //public float speed;
-   // private bool isGameOver = false;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if the obstacle collides with the player
-        if (other.CompareTag("Player"))  // Assuming the player has a "Player" tag
+        if (other.CompareTag("Player"))
         {
-            gameManager manager = Object.FindFirstObjectByType<gameManager>(); // Find the GameManager in the scene
+            gameManager manager = Object.FindFirstObjectByType<gameManager>();
+            ScoreManager scoreManager = FindFirstObjectByType<ScoreManager>();
+
             Debug.Log("Obstacle hit the player!");
-            Destroy(gameObject);  // Optional: Destroy the obstacle after hitting the player
+
+            scoreManager.AddScore(0); // Force UI to refresh before checking high score
+            scoreManager.CheckForHighScore(); // Now saves the correct final score
+
             manager.ShowGameOverUI();
+            Time.timeScale = 0; // Stop the game
         }
     }
-    
 }
