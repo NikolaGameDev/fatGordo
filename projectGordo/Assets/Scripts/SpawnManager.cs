@@ -1,118 +1,47 @@
 using UnityEngine;
+using System.Collections;
 
 public class SpawnManager : MonoBehaviour
 {
-    [Header("Spawn Settings")]
-    public GameObject[] clusterPrefabs;
-    public Transform spawnPoint;
+    [Header("Spawn Prefabs")]
+    public GameObject obstaclePrefab;
+    public GameObject collectablePrefab;
 
-    [Header("Spawn Timing")]
-    public float initialSpawnInterval = 3f;
-    public float minSpawnInterval = 1f;
-    public float spawnIntervalReduction = 0.05f;
-    public float spawnAdjustmentRate = 30f;
+    [Header("Spawn Behavior")]
+    public float minDistance = 2.5f;               // Minimum spacing in world units
+    public float moveSpeed = 6f;                   // How fast objects move
+    public float destroyAfterSeconds = 10f;        // Lifespan of spawned object
 
-    [Header("Speed Settings")]
-    public float initialSpeed = 5f;
-    public float maxSpeed = 30f;
-    public float speedIncreaseAmount = 2f;
-    public float speedIncreaseInterval = 60f;
+    [Header("Spawn Rate Randomness")]
+    [Range(0.8f, 2f)] public float minSpawnRateMultiplier = 1.0f;
+    [Range(0.8f, 2f)] public float maxSpawnRateMultiplier = 1.5f;
 
-    [Header("Destroy Settings")]
-    public float destroyX = -15f; // X position where objects are destroyed
-
-    private float currentSpawnInterval;
-    private float nextSpawnTime;
-    private float currentSpeed;
-    private float nextSpeedIncreaseTime;
-    private float nextSpawnAdjustmentTime;
-
-    private void Start()
+    void Start()
     {
-        currentSpawnInterval = initialSpawnInterval;
-        currentSpeed = initialSpeed;
-        float gameTime = Time.timeSinceLevelLoad;
-        nextSpawnTime = gameTime + currentSpawnInterval;
-        nextSpeedIncreaseTime = gameTime + speedIncreaseInterval;
-        nextSpawnAdjustmentTime = gameTime + spawnAdjustmentRate;
+        StartCoroutine(SpawnLoop());
     }
 
-    private void Update()
+    IEnumerator SpawnLoop()
     {
-        float gameTime = Time.timeSinceLevelLoad;
-
-        if (gameTime >= nextSpawnTime)
+        while (true)
         {
-            SpawnCluster();
-            nextSpawnTime = gameTime + currentSpawnInterval;
-        }
+            // Spawn randomly chosen prefab
+            GameObject prefab = Random.value > 0.5f ? collectablePrefab : obstaclePrefab;
+            GameObject obj = Instantiate(prefab, transform.position, Quaternion.identity);
 
-        if (gameTime >= nextSpeedIncreaseTime)
-        {
-            IncreaseSpeed();
-        }
+            if (obj.TryGetComponent<Rigidbody2D>(out var rb))
+                rb.velocity = Vector2.left * moveSpeed;
 
-        if (gameTime >= nextSpawnAdjustmentTime)
-        {
-            AdjustSpawnRate();
-        }
-    }
+            Destroy(obj, destroyAfterSeconds);
 
-    private void IncreaseSpeed()
-    {
-        if (currentSpeed >= maxSpeed) return;
+            // Base delay from speed and distance
+            float baseDelay = minDistance / moveSpeed;
 
-        currentSpeed = Mathf.Min(maxSpeed, currentSpeed + speedIncreaseAmount);
-        nextSpeedIncreaseTime += speedIncreaseInterval;
-    }
+            // Randomized multiplier for spawn rate variation
+            float multiplier = Random.Range(minSpawnRateMultiplier, maxSpawnRateMultiplier);
+            float finalDelay = baseDelay * multiplier;
 
-    private void AdjustSpawnRate()
-    {
-        if (currentSpawnInterval <= minSpawnInterval) return;
-
-        currentSpawnInterval = Mathf.Max(minSpawnInterval, currentSpawnInterval - spawnIntervalReduction);
-        nextSpawnAdjustmentTime += spawnAdjustmentRate;
-    }
-
-    private void SpawnCluster()
-    {
-        if (clusterPrefabs.Length == 0)
-        {
-            Debug.LogWarning("Spawner: No cluster prefabs assigned.");
-            return;
-        }
-
-        GameObject spawnedCluster = Instantiate(clusterPrefabs[Random.Range(0, clusterPrefabs.Length)], spawnPoint.position, Quaternion.identity);
-        ApplyMovementToCluster(spawnedCluster.transform);
-    }
-
-    private void ApplyMovementToCluster(Transform cluster)
-    {
-        foreach (Transform child in cluster)
-        {
-            child.gameObject.AddComponent<MoveObject>().Initialize(currentSpeed, destroyX);
-        }
-    }
-
-    private class MoveObject : MonoBehaviour
-    {
-        private float moveSpeed;
-        private float destroyX;
-
-        public void Initialize(float speed, float offScreenX)
-        {
-            moveSpeed = speed;
-            destroyX = offScreenX;
-        }
-
-        private void Update()
-        {
-            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
-
-            if (transform.position.x < destroyX)
-            {
-                Destroy(gameObject);
-            }
+            yield return new WaitForSeconds(finalDelay);
         }
     }
 }
