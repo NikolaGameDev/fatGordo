@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4643427324040515151}
   - component: {fileID: 2052492496842426060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 549654321147146631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.59, y: -4.7920003, z: 2}
+  m_LocalPosition: {x: 17.59, y: -4.7920003, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085693063715718451}
   - component: {fileID: 5448421579385607485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 1184941838306553559}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 91.670006, y: 1.1399999, z: 2}
+  m_LocalPosition: {x: 91.670006, y: 1.1399999, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -333,7 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2639269217799999261}
   - component: {fileID: 6668199022109124430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ Transform:
   m_GameObject: {fileID: 1252436263816863447}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 116.16, y: 0.5, z: 2}
+  m_LocalPosition: {x: 116.16, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7239567232792603259}
   - component: {fileID: 1778432077777390784}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 1554713015976075818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.07, y: -0.6080003, z: 2}
+  m_LocalPosition: {x: 57.07, y: -0.6080003, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -594,7 +594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2927104035100391206}
   - component: {fileID: 8029165326139043650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 1810387771432578699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.270004, y: -4.9, z: 2}
+  m_LocalPosition: {x: 46.270004, y: -4.9, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -765,8 +765,6 @@ MonoBehaviour:
   platformPrefabs:
   - {fileID: 4727528521689954846, guid: 9f6b733bdad71a342a8bd38abdad2944, type: 3}
   spawnPoint: {fileID: 1070330151553918913}
-  platformSpeed: 10
-  spawnManually: 0
 --- !u!1 &1962189354759721193
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7314164273473503025}
   - component: {fileID: 6198035883589438525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +791,7 @@ Transform:
   m_GameObject: {fileID: 1962189354759721193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -951,7 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9208531878388301620}
   - component: {fileID: 6846258836226306599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vegetaion_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +965,7 @@ Transform:
   m_GameObject: {fileID: 2487383783445059676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.939999, y: -4.71, z: 2}
+  m_LocalPosition: {x: 19.939999, y: -4.71, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1212,7 +1210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3765932881979191857}
   - component: {fileID: 8625485207733837521}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1226,7 @@ Transform:
   m_GameObject: {fileID: 2949901618307991544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.100006, y: -1.1400003, z: 2}
+  m_LocalPosition: {x: 95.100006, y: -1.1400003, z: 3}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1299,7 +1297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3195180486234760484}
   - component: {fileID: 2621674766310044680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,7 +1313,7 @@ Transform:
   m_GameObject: {fileID: 2988078237106219195}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.62, y: 0.5, z: 2}
+  m_LocalPosition: {x: 65.62, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1386,7 +1384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5679430987589715921}
   - component: {fileID: 3728112911631392911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1402,7 +1400,7 @@ Transform:
   m_GameObject: {fileID: 3089068808531577289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 122.100006, y: -2.3000002, z: 2}
+  m_LocalPosition: {x: 122.100006, y: -2.3000002, z: 3}
   m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1728,7 +1726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1461896299036214148}
   - component: {fileID: 6177625726258209307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1744,7 +1742,7 @@ Transform:
   m_GameObject: {fileID: 3631213547758523478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.130005, y: -4.7920003, z: 2}
+  m_LocalPosition: {x: 58.130005, y: -4.7920003, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1815,7 +1813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918568388726204228}
   - component: {fileID: 3221543071799114056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1831,7 +1829,7 @@ Transform:
   m_GameObject: {fileID: 4091637832591761034}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.730003, y: -4.8500004, z: 2}
+  m_LocalPosition: {x: 63.730003, y: -4.8500004, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1989,7 +1987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3897017343220404125}
   - component: {fileID: 1162096733570435046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vegetaion_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2005,7 +2003,7 @@ Transform:
   m_GameObject: {fileID: 4444769776037251441}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.03, y: -4.71, z: 2}
+  m_LocalPosition: {x: 53.03, y: -4.71, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2076,7 +2074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8630673956877567422}
   - component: {fileID: 87581839572640544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2092,7 +2090,7 @@ Transform:
   m_GameObject: {fileID: 4456014497182836248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.431, y: -4.889, z: 2}
+  m_LocalPosition: {x: 28.431, y: -4.889, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2163,7 +2161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2271758056044041024}
   - component: {fileID: 3878530696688822608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vegetaion_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2179,7 +2177,7 @@ Transform:
   m_GameObject: {fileID: 4457541517974708541}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.689999, y: -4.71, z: 2}
+  m_LocalPosition: {x: 22.689999, y: -4.71, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2250,7 +2248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5213527747388816406}
   - component: {fileID: 8124619336075713475}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_4 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2266,7 +2264,7 @@ Transform:
   m_GameObject: {fileID: 4579557777136683351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.36, y: 2.0899997, z: 2}
+  m_LocalPosition: {x: 105.36, y: 2.0899997, z: 3}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2424,7 +2422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1492813810978508151}
   - component: {fileID: 8226080884139051065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Liana_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2440,7 +2438,7 @@ Transform:
   m_GameObject: {fileID: 4749201682618722654}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.28, y: -2.4400003, z: 2}
+  m_LocalPosition: {x: 55.28, y: -2.4400003, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2631,7 +2629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8514087707579973557}
   - component: {fileID: 2172984756670554093}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2647,7 +2645,7 @@ Transform:
   m_GameObject: {fileID: 5051240860258498313}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.720001, y: -2.0500002, z: 2}
+  m_LocalPosition: {x: 21.720001, y: -2.0500002, z: 3}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2929,7 +2927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5497730481256741850}
   - component: {fileID: 2439419866619995900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2945,7 +2943,7 @@ Transform:
   m_GameObject: {fileID: 5799763864109284325}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.99, y: -4.8500004, z: 2}
+  m_LocalPosition: {x: 11.99, y: -4.8500004, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3047,7 +3045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6507022819334137613}
   - component: {fileID: 627456098133971189}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3063,7 +3061,7 @@ Transform:
   m_GameObject: {fileID: 5873351683550700359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.45, y: -4.9, z: 2}
+  m_LocalPosition: {x: 29.45, y: -4.9, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3166,7 +3164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2984810346050292565}
   - component: {fileID: 5294946246645745028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3182,7 +3180,7 @@ Transform:
   m_GameObject: {fileID: 5959025893934618709}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.65, y: -0.6080003, z: 2}
+  m_LocalPosition: {x: 18.65, y: -0.6080003, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3454,7 +3452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807980109696252722}
   - component: {fileID: 5236625788296053672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3470,7 +3468,7 @@ Transform:
   m_GameObject: {fileID: 6936085530249322900}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.229996, y: 0.13999987, z: 2}
+  m_LocalPosition: {x: 44.229996, y: 0.13999987, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3541,7 +3539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148625106487392215}
   - component: {fileID: 6012418490641461751}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Liana_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3557,7 +3555,7 @@ Transform:
   m_GameObject: {fileID: 7232907079272414495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.439999, y: -2.4400003, z: 2}
+  m_LocalPosition: {x: 20.439999, y: -2.4400003, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3628,7 +3626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3034751785321499833}
   - component: {fileID: 4319244096108920671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vegetaion_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3644,7 +3642,7 @@ Transform:
   m_GameObject: {fileID: 7384641532846896044}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.78, y: -4.71, z: 2}
+  m_LocalPosition: {x: 55.78, y: -4.71, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3849,7 +3847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3617408712477364153}
   - component: {fileID: 627896993816174856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3865,7 +3863,7 @@ Transform:
   m_GameObject: {fileID: 7886056083087759188}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.289, y: -4.889, z: 2}
+  m_LocalPosition: {x: 47.289, y: -4.889, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3989,7 +3987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4047382715678587879}
   - component: {fileID: 5732894381281446358}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_4 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4005,7 +4003,7 @@ Transform:
   m_GameObject: {fileID: 8002283144752002020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.90001, y: -3.0400002, z: 2}
+  m_LocalPosition: {x: 125.90001, y: -3.0400002, z: 3}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4076,7 +4074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347613613512550918}
   - component: {fileID: 2433784881755393640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4092,7 +4090,7 @@ Transform:
   m_GameObject: {fileID: 8130732393634455780}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.59, y: -2.4800003, z: 2}
+  m_LocalPosition: {x: 3.59, y: -2.4800003, z: 3}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4195,7 +4193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353943620857082781}
   - component: {fileID: 8546744477752963064}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4211,7 +4209,7 @@ Transform:
   m_GameObject: {fileID: 8422196381727535130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.920006, y: 0.5, z: 2}
+  m_LocalPosition: {x: 31.920006, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4282,7 +4280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1957304623328156966}
   - component: {fileID: 413568316899126530}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4298,7 +4296,7 @@ Transform:
   m_GameObject: {fileID: 8423690172273906896}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54, y: -2.0500002, z: 2}
+  m_LocalPosition: {x: 54, y: -2.0500002, z: 3}
   m_LocalScale: {x: -0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4456,7 +4454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5538601800771614569}
   - component: {fileID: 1034899465917386643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4472,7 +4470,7 @@ Transform:
   m_GameObject: {fileID: 8766277722802328728}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72.13, y: -2.4800003, z: 2}
+  m_LocalPosition: {x: 72.13, y: -2.4800003, z: 3}
   m_LocalScale: {x: -0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4543,7 +4541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2793282368188754160}
   - component: {fileID: 3246766716134506572}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trees_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4559,7 +4557,7 @@ Transform:
   m_GameObject: {fileID: 9069178454877779555}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.72, y: 0, z: 2}
+  m_LocalPosition: {x: 75.72, y: 0, z: 3}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

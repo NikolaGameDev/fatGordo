@@ -7,10 +7,10 @@ public class Spawner : MonoBehaviour
     [System.Serializable]
     public class SpawnPhase
     {
-        public float moveSpeed = 5f;
-        public float duration = 30f;
-        public float minDelayMultiplier = 0.9f;
-        public float maxDelayMultiplier = 1.5f;
+        public float moveSpeed;
+        public float duration;
+        public float minDelayMultiplier;
+        public float maxDelayMultiplier;
     }
 
     [Header("Prefabs")]
@@ -18,9 +18,9 @@ public class Spawner : MonoBehaviour
     public GameObject collectablePrefab;
 
     [Header("Spawn Settings")]
-    public float minDistance = 2.5f;
-    public float destroyAfterSeconds = 10f;
-    public float breakBetweenPhases = 3f;
+    public float minDistance;
+    public float destroyAfterSeconds;
+    public float breakBetweenPhases;
 
     [Header("Phases")]
     public List<SpawnPhase> phases = new List<SpawnPhase>();
@@ -59,7 +59,7 @@ public class Spawner : MonoBehaviour
             GameObject obj = Instantiate(prefab, transform.position, Quaternion.identity);
 
             if (obj.TryGetComponent<Rigidbody2D>(out var rb))
-                rb.velocity = Vector2.left * phase.moveSpeed;
+                rb.linearVelocity = Vector2.left * phase.moveSpeed;
 
             Destroy(obj, destroyAfterSeconds);
 
