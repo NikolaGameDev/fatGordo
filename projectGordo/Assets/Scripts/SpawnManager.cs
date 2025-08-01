@@ -7,46 +7,74 @@ public class Spawner : MonoBehaviour
     [System.Serializable]
     public class SpawnPhase
     {
-        public float moveSpeed;
-        public float duration;
-        public float minDelayMultiplier;
-        public float maxDelayMultiplier;
+        public float moveSpeed = 6f;          // world/hazard speed for this phase
+        public float duration = 30f;          // seconds
+        public float minDelayMultiplier = 0.9f;
+        public float maxDelayMultiplier = 1.5f;
     }
 
     [Header("Prefabs")]
-    public GameObject obstaclePrefab;
-    public GameObject collectablePrefab;
+    [SerializeField] private GameObject obstaclePrefab;
+    [SerializeField] private GameObject collectablePrefab;
 
     [Header("Spawn Settings")]
-    public float minDistance;
-    public float destroyAfterSeconds;
-    public float breakBetweenPhases;
+    [SerializeField] private float minDistance = 2.5f;        // spacing baseline (world units)
+    [SerializeField] private float destroyAfterSeconds = 10f; // lifetime
+    [SerializeField] private float breakBetweenPhases = 2f;   // pause between phases
 
     [Header("Phases")]
-    public List<SpawnPhase> phases = new List<SpawnPhase>();
+    [SerializeField] private List<SpawnPhase> phases = new List<SpawnPhase>();
+
+    // runtime
+    private readonly List<Transform> active = new List<Transform>();
+    private float currentSpeed = 0f;
 
     void Start()
     {
         StartCoroutine(PhaseManager());
     }
 
+    void Update()
+    {
+        // Centralized movement (no Rigidbody2D on spawned objects)
+        if (active.Count == 0) return;
+
+        float dx = currentSpeed * Time.deltaTime;
+        for (int i = active.Count - 1; i >= 0; i--)
+        {
+            Transform t = active[i];
+            if (t == null) { active.RemoveAt(i); continue; }
+            t.Translate(Vector3.left * dx, Space.World);
+        }
+    }
+
     IEnumerator PhaseManager()
     {
-        foreach (var phase in phases)
+        for (int i = 0; i < phases.Count; i++)
         {
-            Debug.Log($"Starting Phase with speed {phase.moveSpeed}");
+            var phase = phases[i];
+            currentSpeed = phase.moveSpeed;
+            Debug.Log($"Starting Phase {i + 1} | speed {currentSpeed}");
 
             yield return StartCoroutine(SpawnLoop(phase));
 
-            Debug.Log("Break between phases...");
-            yield return new WaitForSeconds(breakBetweenPhases);
+            if (i < phases.Count - 1)
+            {
+                Debug.Log("Break between phases…");
+                yield return new WaitForSeconds(breakBetweenPhases);
+            }
         }
 
-        Debug.Log("All phases complete. Looping last phase forever.");
-        // Infinite loop on last phase
+        // Loop last phase forever
         if (phases.Count > 0)
+        {
+            var last = phases[phases.Count - 1];
             while (true)
-                yield return StartCoroutine(SpawnLoop(phases[phases.Count - 1]));
+            {
+                currentSpeed = last.moveSpeed;
+                yield return StartCoroutine(SpawnLoop(last));
+            }
+        }
     }
 
     IEnumerator SpawnLoop(SpawnPhase phase)
@@ -55,19 +83,31 @@ public class Spawner : MonoBehaviour
 
         while (elapsed < phase.duration)
         {
-            GameObject prefab = Random.value > 0.5f ? collectablePrefab : obstaclePrefab;
+            // choose prefab and spawn at spawner position
+            GameObject prefab = (Random.value > 0.5f) ? collectablePrefab : obstaclePrefab;
             GameObject obj = Instantiate(prefab, transform.position, Quaternion.identity);
 
-            if (obj.TryGetComponent<Rigidbody2D>(out var rb))
-                rb.linearVelocity = Vector2.left * phase.moveSpeed;
+            // track & schedule destroy
+            var tr = obj.transform;
+            active.Add(tr);
+            if (destroyAfterSeconds > 0f) StartCoroutine(DestroyAfter(obj, destroyAfterSeconds));
 
-            Destroy(obj, destroyAfterSeconds);
-
+            // spacing delay based on current speed (respects phase speed)
             float baseDelay = minDistance / phase.moveSpeed;
             float delay = baseDelay * Random.Range(phase.minDelayMultiplier, phase.maxDelayMultiplier);
 
             yield return new WaitForSeconds(delay);
             elapsed += delay;
+        }
+    }
+
+    IEnumerator DestroyAfter(GameObject go, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        if (go != null)
+        {
+            active.Remove(go.transform);
+            Destroy(go);
         }
     }
 }
