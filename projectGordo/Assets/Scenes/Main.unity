@@ -791,12 +791,8 @@ MonoBehaviour:
     duration: 15
     minDelayMultiplier: 0.5
     maxDelayMultiplier: 3
-  - moveSpeed: 10
+  - moveSpeed: 11
     duration: 15
-    minDelayMultiplier: 0.5
-    maxDelayMultiplier: 2
-  - moveSpeed: 15
-    duration: 1e+10
     minDelayMultiplier: 0.5
     maxDelayMultiplier: 2
 --- !u!212 &674687433
@@ -908,6 +904,8 @@ GameObject:
   - component: {fileID: 712434891}
   - component: {fileID: 712434890}
   - component: {fileID: 712434892}
+  - component: {fileID: 712434893}
+  - component: {fileID: 712434894}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1023,6 +1021,40 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &712434893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712434887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1c7944be466ff40a674568c92af6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &712434894
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712434887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b77802114ed5324fb90dda7febda2ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &849514750
 GameObject:
   m_ObjectHideFlags: 0
