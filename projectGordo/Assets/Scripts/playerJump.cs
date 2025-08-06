@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class playerJump : MonoBehaviour
 {
-    public float jumpForce = 10f, coyoteTime = 0.1f;
+    public float jumpForce , coyoteTime = 0.1f;
     public Transform groundCheck;
     public LayerMask groundLayer;
     private Rigidbody2D rb;

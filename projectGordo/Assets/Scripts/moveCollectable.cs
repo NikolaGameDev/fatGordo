@@ -19,7 +19,7 @@ public class Collectable : MonoBehaviour
 
             scoreManager.AddScore(scoreValue); // Just update the score
             gameManager.playCollectSound();
-
+            Object.FindFirstObjectByType<popGlow>()?.TriggerCollectableEffect();
             Debug.Log("Collectable collected!");
             Destroy(gameObject);
         }
