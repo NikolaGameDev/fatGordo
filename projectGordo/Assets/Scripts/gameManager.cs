@@ -6,13 +6,13 @@ public class gameManager : MonoBehaviour
 {
     public GameObject gameOverUI; // Reference to the Game Over UI
     public Button restartButton; // Reference to the restart button
-    public Button quitButton; // Reference to the quit button
+   // public Button quitButton; // Reference to the quit button
     public AudioSource audioSource;
     public AudioClip collectableSound;
     private void Start()
     {
         restartButton.onClick.AddListener(RestartLevel);
-        quitButton.onClick.AddListener(QuitGame);
+       // quitButton.onClick.AddListener(QuitGame);
     }
     public void ShowGameOverUI()
     {
@@ -21,6 +21,7 @@ public class gameManager : MonoBehaviour
     }
     public void RestartLevel()
     {
+        Debug.Log("Clicked restart");
         Time.timeScale = 1f; // Unpause the game
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Restart the current scene
     }
