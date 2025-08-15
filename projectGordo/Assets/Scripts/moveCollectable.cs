@@ -16,6 +16,7 @@ public class Collectable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ScoreManager scoreManager = Object.FindFirstObjectByType<ScoreManager>();
+            FindFirstObjectByType<cameraKick>()?.Kick(Vector2.up);
 
             scoreManager.AddScore(scoreValue); // Just update the score
             gameManager.playCollectSound();

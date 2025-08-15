@@ -11,7 +11,7 @@ public class gameManager : MonoBehaviour
     public AudioClip collectableSound;
     private void Start()
     {
-        restartButton.onClick.AddListener(RestartLevel);
+       // restartButton.onClick.AddListener(RestartLevel);
        // quitButton.onClick.AddListener(QuitGame);
     }
     public void ShowGameOverUI()
