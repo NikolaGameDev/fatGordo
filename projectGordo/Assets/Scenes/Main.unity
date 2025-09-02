@@ -863,7 +863,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.280001, y: 8, z: -10}
+  m_LocalPosition: {x: 13.280001, y: 7.52, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1004,15 +1004,15 @@ MonoBehaviour:
   destroyAfterSeconds: 10
   breakBetweenPhases: 7
   phases:
-  - moveSpeed: 6
+  - moveSpeed: 10
     duration: 15
     minDelayMultiplier: 0.5
     maxDelayMultiplier: 3
-  - moveSpeed: 8.5
+  - moveSpeed: 15
     duration: 15
     minDelayMultiplier: 0.5
     maxDelayMultiplier: 3
-  - moveSpeed: 11
+  - moveSpeed: 20
     duration: 15
     minDelayMultiplier: 0.5
     maxDelayMultiplier: 2
@@ -1080,7 +1080,7 @@ Transform:
   m_GameObject: {fileID: 674687431}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.605396, y: 2.6664636, z: -6}
+  m_LocalPosition: {x: 53.605396, y: 1.91, z: -6}
   m_LocalScale: {x: 2.308, y: 2.1214, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2879,10 +2879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1c7944be466ff40a674568c92af6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: Idle
-  run: Run
-  run1: Run1
-  run2: Run2
 --- !u!95 &996948664
 Animator:
   serializedVersion: 7
@@ -3206,10 +3202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1c7944be466ff40a674568c92af6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: Idle
-  run: Run
-  run1: Run1
-  run2: Run2
 --- !u!95 &997151074
 Animator:
   serializedVersion: 7
@@ -3247,7 +3239,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3271,7 +3263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdeaeba44e113e42b8ec63559c0ff69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 20
+  jumpForce: 26
   coyoteTime: 0.1
   groundCheck: {fileID: 993364671}
   groundLayer:
@@ -3336,7 +3328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashColor: {r: 1, g: 0.923077, b: 0, a: 1}
-  flashDuration: 0.1
+  flashDuration: 0.3
   popScaleMultiplier: 1.1
 --- !u!1 &997154730
 GameObject:
@@ -3478,7 +3470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 11}
+  m_AnchoredPosition: {x: 55, y: 11}
   m_SizeDelta: {x: 11.3496, y: 11.2558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043912443

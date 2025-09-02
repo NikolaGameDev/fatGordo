@@ -14,6 +14,6 @@ public class GordoAnimSimple : MonoBehaviour
         anim.SetFloat("runSpeed", s, 0.08f, Time.deltaTime);
 
         // Bonus: subtle speed-up of animation playback
-     //   anim.speed = 1f + (s / 50f);
+        anim.speed = 1f + (s / 50f);
     }
 }
